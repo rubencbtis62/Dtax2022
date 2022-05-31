@@ -1,0 +1,10 @@
+select 1
+use \ietu
+go top
+con = 1
+do while !eof()
+   replace numero with con
+   con = con + 1
+   skip
+enddo
+close all

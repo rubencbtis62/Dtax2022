@@ -1,0 +1,17 @@
+local val1, val2, clav, conce
+
+vall =1
+val2 =0
+clav =""
+conce=""
+
+select 1
+use table2
+go top
+
+repl clave with "M" all
+
+CLOSE TABLES
+
+
+

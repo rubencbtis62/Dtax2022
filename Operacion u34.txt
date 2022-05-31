@@ -1,0 +1,19 @@
+
+
+U25
+	GO top
+	LOCATE FOR cal_ietu.clave='U3'
+	valor1 = cal_ietu.&mes1
+        resultado = ((opera/36)*i)*valor1
+	LOCATE FOR cal_ietu.clave=clave1	
+
+
+U34
+
+	LOCATE FOR cal_ietu.clave='U2'	
+	valor1 = cal_ietu.&mes1		
+	LOCATE FOR cal_ietu.clave='U28'	
+	valor2 = cal_ietu.&mes1
+        valor3= thisform.inpc_anterior(VAL(thisform.cboejercicio.value)-1,,12,4,2)                
+        factor_act = valor3 / valor1
+        resultado = ((((  (opera*.6)  /12)*i) * valor2)/100) 	* factor_act
