@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 05/30/22            PRINCIPAL.MPR             12:59:16  
+*       * 06/14/22            PRINCIPAL.MPR             11:02:41  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -27,42 +27,42 @@
 SET SYSMENU TO
 SET SYSMENU AUTOMATIC
 
-DEFINE PAD _6cg0ru5ab OF _MSYSMENU PROMPT "Empresas" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e0 OF _MSYSMENU PROMPT "Empresas" COLOR SCHEME 3 ;
 	KEY ALT+E, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5ac OF _MSYSMENU PROMPT "Indicadores Fiscales" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e1 OF _MSYSMENU PROMPT "Indicadores Fiscales" COLOR SCHEME 3 ;
 	KEY ALT+I, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5ad OF _MSYSMENU PROMPT "Tablas y Tarifas" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e2 OF _MSYSMENU PROMPT "Tablas y Tarifas" COLOR SCHEME 3 ;
 	KEY ALT+T, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5ae OF _MSYSMENU PROMPT "Captura" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e3 OF _MSYSMENU PROMPT "Captura" COLOR SCHEME 3 ;
 	KEY ALT+C, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5af OF _MSYSMENU PROMPT "Cálculos" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e4 OF _MSYSMENU PROMPT "Cálculos" COLOR SCHEME 3 ;
 	KEY ALT+C, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5ag OF _MSYSMENU PROMPT "Reportes" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e5 OF _MSYSMENU PROMPT "Reportes" COLOR SCHEME 3 ;
 	KEY ALT+R, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5ah OF _MSYSMENU PROMPT "Herramientas" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e6 OF _MSYSMENU PROMPT "Herramientas" COLOR SCHEME 3 ;
 	KEY ALT+H, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5ai OF _MSYSMENU PROMPT "Acerca de .." COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e7 OF _MSYSMENU PROMPT "Acerca de .." COLOR SCHEME 3 ;
 	KEY ALT+A, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6cg0ru5aj OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
+DEFINE PAD _6cv0no8e8 OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
 	KEY ALT+S, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-ON PAD _6cg0ru5ab OF _MSYSMENU ACTIVATE POPUP empresas
-ON PAD _6cg0ru5ac OF _MSYSMENU ACTIVATE POPUP _36r1evab8
-ON PAD _6cg0ru5ad OF _MSYSMENU ACTIVATE POPUP tablasytar
-ON PAD _6cg0ru5ae OF _MSYSMENU ACTIVATE POPUP captura
-ON PAD _6cg0ru5af OF _MSYSMENU ACTIVATE POPUP cálculos
-ON PAD _6cg0ru5ag OF _MSYSMENU ACTIVATE POPUP reportes
-ON PAD _6cg0ru5ah OF _MSYSMENU ACTIVATE POPUP herramient
-ON SELECTION PAD _6cg0ru5ai OF _MSYSMENU do form forms\frmacercade.scx
-ON SELECTION PAD _6cg0ru5aj OF _MSYSMENU quit
+ON PAD _6cv0no8e0 OF _MSYSMENU ACTIVATE POPUP empresas
+ON PAD _6cv0no8e1 OF _MSYSMENU ACTIVATE POPUP _36r1evab8
+ON PAD _6cv0no8e2 OF _MSYSMENU ACTIVATE POPUP tablasytar
+ON PAD _6cv0no8e3 OF _MSYSMENU ACTIVATE POPUP captura
+ON PAD _6cv0no8e4 OF _MSYSMENU ACTIVATE POPUP cálculos
+ON PAD _6cv0no8e5 OF _MSYSMENU ACTIVATE POPUP reportes
+ON PAD _6cv0no8e6 OF _MSYSMENU ACTIVATE POPUP herramient
+ON SELECTION PAD _6cv0no8e7 OF _MSYSMENU do form forms\frmacercade.scx
+ON SELECTION PAD _6cv0no8e8 OF _MSYSMENU quit
 
 DEFINE POPUP empresas MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF empresas PROMPT "Actualizar" ;
@@ -71,7 +71,7 @@ DEFINE BAR 1 OF empresas PROMPT "Actualizar" ;
 DEFINE BAR 2 OF empresas PROMPT "Listado"
 ON SELECTION BAR 1 OF empresas do form forms\frm_empresas.scx
 ON SELECTION BAR 2 OF empresas ;
-	DO _6cg0ru5ak ;
+	DO _6cv0no8e9 ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 
 DEFINE POPUP _36r1evab8 MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -173,16 +173,16 @@ DEFINE BAR 3 OF _36x00sl2q PROMPT "Empresarial  - Intermedio - Profesional"
 DEFINE BAR 4 OF _36x00sl2q PROMPT "Personas Fisicas de Arrendamiento"
 DEFINE BAR 5 OF _36x00sl2q PROMPT "Personas Morales Titulo I I"
 ON SELECTION BAR 1 OF _36x00sl2q ;
-	DO _6cg0ru5al ;
+	DO _6cv0no8ea ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 ON SELECTION BAR 3 OF _36x00sl2q ;
-	DO _6cg0ru5am ;
+	DO _6cv0no8eb ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 ON SELECTION BAR 4 OF _36x00sl2q ;
-	DO _6cg0ru5an ;
+	DO _6cv0no8ec ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 ON SELECTION BAR 5 OF _36x00sl2q ;
-	DO _6cg0ru5ao ;
+	DO _6cv0no8ed ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 
 DEFINE POPUP herramient MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -195,12 +195,12 @@ DEFINE BAR 3 OF herramient PROMPT "Respaldo / Restauracion" ;
 DEFINE BAR 4 OF herramient PROMPT "\-"
 DEFINE BAR 5 OF herramient PROMPT "Depurar Bases" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE BAR 6 OF herramient PROMPT "Crear Indices"
+DEFINE BAR 6 OF herramient PROMPT "Reindexar BD"
 ON SELECTION BAR 1 OF herramient =sys(1037)
 ON BAR 3 OF herramient ACTIVATE POPUP respaldore
 ON SELECTION BAR 5 OF herramient do form forms\limpiar.scx
 ON SELECTION BAR 6 OF herramient ;
-	DO _6cg0ru5ap ;
+	DO _6cv0no8ee ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 
 DEFINE POPUP respaldore MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -215,7 +215,7 @@ ON SELECTION BAR 3 OF respaldore do form forms\frm_backup.scx
 
 *       *********************************************************
 *       *                                                         
-*       * _6CG0RU5AK  ON SELECTION BAR 2 OF POPUP empresas        
+*       * _6CV0NO8E9  ON SELECTION BAR 2 OF POPUP empresas        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -226,7 +226,7 @@ ON SELECTION BAR 3 OF respaldore do form forms\frm_backup.scx
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6cg0ru5ak
+PROCEDURE _6cv0no8e9
 USE data\empresas
 BROWSE
 USE
@@ -235,7 +235,7 @@ USE
 
 *       *********************************************************
 *       *                                                         
-*       * _6CG0RU5AL  ON SELECTION BAR 1 OF POPUP _36x00sl2q      
+*       * _6CV0NO8EA  ON SELECTION BAR 1 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -246,7 +246,7 @@ USE
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6cg0ru5al
+PROCEDURE _6cv0no8ea
 CLOSE DATABASES
 OPEN DATABASE ('data\cpasystem')
 SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
@@ -268,7 +268,7 @@ CLOSE DATABASES
 
 *       *********************************************************
 *       *                                                         
-*       * _6CG0RU5AM  ON SELECTION BAR 3 OF POPUP _36x00sl2q      
+*       * _6CV0NO8EB  ON SELECTION BAR 3 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -279,7 +279,7 @@ CLOSE DATABASES
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6cg0ru5am
+PROCEDURE _6cv0no8eb
 PUBLIC regimen_tit
 regimen_tit = "Personas Fisicas Emp. Interm. Prof"
 CLOSE DATABASES
@@ -302,7 +302,7 @@ CLOSE DATABASES
 
 *       *********************************************************
 *       *                                                         
-*       * _6CG0RU5AN  ON SELECTION BAR 4 OF POPUP _36x00sl2q      
+*       * _6CV0NO8EC  ON SELECTION BAR 4 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -313,7 +313,7 @@ CLOSE DATABASES
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6cg0ru5an
+PROCEDURE _6cv0no8ec
 PUBLIC regimen_tit
 regimen_tit = "Personas Fisicas Emp. Interm. Prof"
 CLOSE DATABASES
@@ -336,7 +336,7 @@ CLOSE DATABASES
 
 *       *********************************************************
 *       *                                                         
-*       * _6CG0RU5AO  ON SELECTION BAR 5 OF POPUP _36x00sl2q      
+*       * _6CV0NO8ED  ON SELECTION BAR 5 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -347,7 +347,7 @@ CLOSE DATABASES
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6cg0ru5ao
+PROCEDURE _6cv0no8ed
 PUBLIC regimen_tit
 regimen_tit = "Personas Fisicas Emp. Interm. Prof"
 CLOSE DATABASES
@@ -370,48 +370,88 @@ CLOSE DATABASES
 
 *       *********************************************************
 *       *                                                         
-*       * _6CG0RU5AP  ON SELECTION BAR 6 OF POPUP herramient      
+*       * _6CV0NO8EE  ON SELECTION BAR 6 OF POPUP herramient      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
 *       * From Menu:  PRINCIPAL.MPR,            Record:   68      
 *       * Called By:  ON SELECTION BAR 6 OF POPUP herramient      
-*       * Prompt:     Crear Indices                               
+*       * Prompt:     Reindexar BD                                
 *       * Snippet:    6                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6cg0ru5ap
-   		SET multilock on
-   		SET SAFETY on
-   		USE data\captura IN 52 EXCLUSIVE
-		SELECT 52
-		PACK
-		USE
-		
-		USE data\captura_iva IN 52 EXCLUSIVE
-		SELECT 52
-		PACK
-		USE		
-		USE data\captura_ret IN 52 EXCLUSIVE
-		SELECT 52
-		PACK
-		USE		
-		USE data\captura_nom IN 52 EXCLUSIVE
-		SELECT 52
-		PACK
-		USE
-		USE data\captura_hos IN 52 EXCLUSIVE
-		SELECT 52
-		PACK
-		USE			
-		USE data\subsidio_empleo IN 52 EXCLUSIVE
-		SELECT 52
-		PACK
-		USE			
-		USE data\subsidio_em IN 52 EXCLUSIVE
-		SELECT 52
-		PACK
-		USE		
+PROCEDURE _6cv0no8ee
+respuesta = MESSAGEBOX("Quieres reindexar Base de datos",4+32+0,"Estas Seguro")
+IF respuesta=6
+
+  SET multilock on
+  SET SAFETY on
+  **// Reindexar base de datos
+
+	USE data\conceptos IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on tipo TAG tipo
+	INDEX on clave TAG clave
+	USE	
+
+	USE data\empresas IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id_em TAG id_em
+	INDEX on em1 TAG em1
+	INDEX on em2 TAG em2
+	INDEX on em7 TAG em7
+	USE	
+
+	USE data\inpc IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on anio TAG anio
+	USE	
+
+	USE data\recargos IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on anio TAG anio
+	USE	
+
+	USE data\sub_emp IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id_em TAG id_em
+	INDEX on anio TAG anio
+	USE	
+
+	USE data\sub_emp1 IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id_em TAG id_em
+	INDEX on anio TAG anio
+	USE	
+
+	USE data\tabla_isr IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id TAG id
+	USE	
+
+	USE data\tarifa_ietu IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id TAG id
+	USE	
+
+	USE data\tarifa_morales IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id TAG id
+	USE	
+
+	USE data\tasa_hospedaje IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id_anio TAG id_anio
+	USE	
+
+	USE data\tasa_nomina IN 0 EXCLUSIVE
+	DELETE TAG all
+	INDEX on id_anio TAG id_anio
+	USE
+	
 		SET SAFETY off
 		MESSAGEBOX("Indices Creados",0+64,0,"Mensaje del Sistema")
+ELSE
+		MESSAGEBOX("Operación cancelada por el usuario",0+64,0,"Mensaje del Sistema")
+endif		
