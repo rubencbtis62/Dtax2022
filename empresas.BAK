@@ -1,0 +1,22 @@
+set safety off
+
+USE l:\dtax\diferencia.dbf IN 8 EXCLUSIVE
+select 8
+zap
+
+
+INSERT INTO diferencia SELECT t1.em1,t2.em1,t2.em2,t2.em3,t2.em4,t2.em5,t2.em6,t2.em7,t2.em8,t2.em9,t2.em10,t2.em11  FROM data\empresas t1 RIGHT outer JOIN vempresas t2 ON t1.em1=t2.em1 WHERE t1.em1 is null
+
+
+**//COPY TO diferencia.dbf
+**//select 8
+**//ALTER TABLE diferencia RENAME COLUMN em1_b TO em1
+
+clos all
+
+INSERT INTO data\empresas SELECT * FROM  diferencia
+
+set safety on
+clos all
+
+**// SELECT t1.em1,t2.em1,t2.em2,t2.em3,t2.em4,t2.em5,t2.em6,t2.em7,t2.em8,t2.em9,t2.em10,t2.em11 FROM data\empresas t1 RIGHT **// outer JOIN vempresas t2 ON t1.em1=t2.em1 WHERE t1.em1 is null
