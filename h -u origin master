@@ -1,0 +1,41 @@
+[33mcommit cf7aba0009f8bc6676a8b7e982d9a6713b131049[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ruben Hernandez <ruben.cbtis62@gmail.com>
+Date:   Thu Nov 24 12:51:52 2022 -0700
+
+    Escribir breve descripción
+
+[33mcommit c876585684346c7172c6574a0fd54105e1e7cf42[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ruben Hernandez <ruben.cbtis62@gmail.com>
+Date:   Mon Oct 31 12:50:25 2022 -0700
+
+    Cambio IPNC en nomina y hospedaje
+
+[33mcommit 05176ecc6cfdbc165325b2909cb271e1317a6b02[m
+Author: Ruben Hernandez <ruben.cbtis62@gmail.com>
+Date:   Thu Oct 6 12:24:14 2022 -0600
+
+    Se agraga modulo Resico
+
+[33mcommit fd31f6e1cb7975af3e4aa0d2b36ecbf65cb2a72d[m
+Author: Ruben Hernandez <ruben.cbtis62@gmail.com>
+Date:   Tue Jun 14 11:10:19 2022 -0600
+
+    Actualizacion menu reindexar
+
+[33mcommit 8e432962f306955e5796c5e19f63a73d1b76a36b[m
+Author: Ruben Hernandez <ruben.cbtis62@gmail.com>
+Date:   Mon Jun 6 11:00:04 2022 -0600
+
+    Se actualizo formato y mascaras en calculos 6
+
+[33mcommit 803c51053c44e5f21af860b6e559aca69c6fdd25[m
+Author: Ruben Hernandez <ruben.cbtis62@gmail.com>
+Date:   Tue May 31 10:37:28 2022 -0600
+
+    Se agrego .gitignore
+
+[33mcommit d9f770428473ef4dd2cca0d10dec37f301182530[m
+Author: Ruben Hernandez <ruben.cbtis62@gmail.com>
+Date:   Tue May 31 10:17:45 2022 -0600
+
+    Version con nuevo regimen ReSiCo

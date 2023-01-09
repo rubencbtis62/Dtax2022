@@ -1,0 +1,50 @@
+git initpwd
+ls
+cd /l/dtax
+git ingit init
+git status
+git add index.html  // agregar el archivo index.html
+git add .     // Todos los archivos
+git config --global user.email "ruben.cbtis62@gmail.com"
+git config --global user.name "Ruben Hernandez"
+git commit
+git commit -m "Escribir breve descripción"
+
+ver las versiones de commit
+git log
+
+Conectar con github
+git remote add origin https://github.com/rubencbtis62/dtax2022.git
+git push -u origin master
+
+descargar codigo de github
+git clone https://github.com/rubencbtis62/Dtax2022.git
+
+
+cambiar nuevo remoto url
+git remote set-url origin NUEVA_URL
+
+git branch
+
+git branch login
+git checkout login
+git branch login
+
+
+Crear una copia de un Git
+-------------------------
+
+
+
+----------------
+Deshacer un cambio
+----------------
+git checkout -- index.html
+
+git diff index.html
+-----------------
+Ignorar archivos
+-----------------
+
+
+
