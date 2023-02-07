@@ -1,10 +1,25 @@
-select 1
-use data\empresas
-go top
-con = 1
-do while !eof()
-   replace id_em with con
-   con = con + 1
-   skip
-enddo
-close all
+	select 1
+	use ejemplo
+	select 2
+	use data\conceptos
+	go top
+	SET FILTER TO SUBSTR(clave1,1,1)="U"   
+	GO top			
+	DO while .t.
+		SELECT ejemplo
+		APPEND BLANK
+		replace tipo with 1
+		REPLACE ejemplo.clave WITH conceptos.clave1
+		REPLACE ejemplo.concepto WITH conceptos.concepto1
+		REPLACE ejemplo.numero WITH conceptos.numero
+		REPLACE ejemplo.letra WITH conceptos.letra
+		SELECT conceptos
+		SKIP
+		IF EOF()
+			EXIT
+		ENDIF                    
+	ENDDO
+select conceptos
+use
+select ejemplo
+use

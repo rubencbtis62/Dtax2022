@@ -1,10 +1,24 @@
-select 1
-use \ietu
-go top
-con = 1
-do while !eof()
-   replace numero with con
-   con = con + 1
-   skip
-enddo
-close all
+	select 1
+	use ejemplo
+	select 2
+	use data\conceptos
+	go top
+	SET FILTER TO SUBSTR(clave1,1,1)="U"   
+	GO top			
+	DO while .t.
+		SELECT ejemplo
+		APPEND BLANK
+		REPLACE ejemplo.clave WITH conceptos.clave1
+		REPLACE ejemplo.concepto WITH conceptos.concepto1
+		replace tipo with 1
+		replace letra with "U"
+		SELECT conceptos
+		SKIP
+		IF EOF()
+			EXIT
+		ENDIF                    
+	ENDDO
+select conceptos
+use
+select ejemplo
+use
