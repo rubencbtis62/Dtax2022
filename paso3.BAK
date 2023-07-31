@@ -1,0 +1,22 @@
+	select 1
+	use base6
+	GO top
+	select 2
+	use data\conceptos
+	go top
+    locate for clave6="I1"
+	DO while .t.
+		SELECT base6
+		replace conceptos.clave6 with base6.clave6
+		REPLACE conceptos.concepto6 WITH base6.concepto6
+		SKIP
+		IF EOF()
+			EXIT
+		ENDIF
+		select conceptos
+		skip
+	ENDDO
+select conceptos
+use
+select BASE6
+use
