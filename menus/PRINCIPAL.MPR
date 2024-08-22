@@ -1,12 +1,12 @@
 *       *********************************************************
 *       *                                                         
-*       * 01/19/23            PRINCIPAL.MPR             12:30:53  
+*       * 03/05/24            PRINCIPAL.MPR             12:18:42  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
 *       * Ing. Ruben Alonso Hernandez Grijalva                    
 *       *                                                         
-*       * Copyright (C) 2023 Dmakes                               
+*       * Copyright (C) 2024 Dmakes                               
 *       * Navarro 116                                             
 *       * La Paz, B.C.S  23000                                       
 *       * Mexico                                            
@@ -27,42 +27,42 @@
 SET SYSMENU TO
 SET SYSMENU AUTOMATIC
 
-DEFINE PAD _6j00qtn61 OF _MSYSMENU PROMPT "Empresas" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzpv OF _MSYSMENU PROMPT "Empresas" COLOR SCHEME 3 ;
 	KEY ALT+E, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn62 OF _MSYSMENU PROMPT "Indicadores Fiscales" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzpw OF _MSYSMENU PROMPT "Indicadores Fiscales" COLOR SCHEME 3 ;
 	KEY ALT+I, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn63 OF _MSYSMENU PROMPT "Tablas y Tarifas" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzpx OF _MSYSMENU PROMPT "Tablas y Tarifas" COLOR SCHEME 3 ;
 	KEY ALT+T, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn64 OF _MSYSMENU PROMPT "Captura" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzpy OF _MSYSMENU PROMPT "Captura" COLOR SCHEME 3 ;
 	KEY ALT+C, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn65 OF _MSYSMENU PROMPT "Cálculos" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzpz OF _MSYSMENU PROMPT "Cálculos" COLOR SCHEME 3 ;
 	KEY ALT+C, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn66 OF _MSYSMENU PROMPT "Reportes" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzq0 OF _MSYSMENU PROMPT "Reportes" COLOR SCHEME 3 ;
 	KEY ALT+R, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn67 OF _MSYSMENU PROMPT "Herramientas" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzq1 OF _MSYSMENU PROMPT "Herramientas" COLOR SCHEME 3 ;
 	KEY ALT+H, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn68 OF _MSYSMENU PROMPT "Acerca de .." COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzq2 OF _MSYSMENU PROMPT "Acerca de .." COLOR SCHEME 3 ;
 	KEY ALT+A, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE PAD _6j00qtn69 OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
+DEFINE PAD _6uh0qdzq3 OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
 	KEY ALT+S, "" ;
 	SKIP FOR !EMPTY(WONTOP( ))
-ON PAD _6j00qtn61 OF _MSYSMENU ACTIVATE POPUP empresas
-ON PAD _6j00qtn62 OF _MSYSMENU ACTIVATE POPUP _36r1evab8
-ON PAD _6j00qtn63 OF _MSYSMENU ACTIVATE POPUP tablasytar
-ON PAD _6j00qtn64 OF _MSYSMENU ACTIVATE POPUP captura
-ON PAD _6j00qtn65 OF _MSYSMENU ACTIVATE POPUP cálculos
-ON PAD _6j00qtn66 OF _MSYSMENU ACTIVATE POPUP reportes
-ON PAD _6j00qtn67 OF _MSYSMENU ACTIVATE POPUP herramient
-ON SELECTION PAD _6j00qtn68 OF _MSYSMENU do form forms\frmacercade.scx
-ON SELECTION PAD _6j00qtn69 OF _MSYSMENU quit
+ON PAD _6uh0qdzpv OF _MSYSMENU ACTIVATE POPUP empresas
+ON PAD _6uh0qdzpw OF _MSYSMENU ACTIVATE POPUP _36r1evab8
+ON PAD _6uh0qdzpx OF _MSYSMENU ACTIVATE POPUP tablasytar
+ON PAD _6uh0qdzpy OF _MSYSMENU ACTIVATE POPUP captura
+ON PAD _6uh0qdzpz OF _MSYSMENU ACTIVATE POPUP cálculos
+ON PAD _6uh0qdzq0 OF _MSYSMENU ACTIVATE POPUP reportes
+ON PAD _6uh0qdzq1 OF _MSYSMENU ACTIVATE POPUP herramient
+ON SELECTION PAD _6uh0qdzq2 OF _MSYSMENU do form forms\frmacercade.scx
+ON SELECTION PAD _6uh0qdzq3 OF _MSYSMENU quit
 
 DEFINE POPUP empresas MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF empresas PROMPT "Actualizar" ;
@@ -71,7 +71,7 @@ DEFINE BAR 1 OF empresas PROMPT "Actualizar" ;
 DEFINE BAR 2 OF empresas PROMPT "Listado"
 ON SELECTION BAR 1 OF empresas do form forms\frm_empresas.scx
 ON SELECTION BAR 2 OF empresas ;
-	DO _6j00qtn6a ;
+	DO _6uh0qdzq4 ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 
 DEFINE POPUP _36r1evab8 MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -81,22 +81,31 @@ DEFINE BAR 1 OF _36r1evab8 PROMPT "INPC" ;
 DEFINE BAR 2 OF _36r1evab8 PROMPT "Tasa de Recargos" ;
 	SKIP FOR !EMPTY(WONTOP( )) ;
 	PICTURE "..\icons\miscb33.ico"
+DEFINE BAR 3 OF _36r1evab8 PROMPT "\-"
+DEFINE BAR 4 OF _36r1evab8 PROMPT "Periodos" ;
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\graph07.ico"
 ON SELECTION BAR 1 OF _36r1evab8 do form forms\frm_inpc.scx
 ON SELECTION BAR 2 OF _36r1evab8 do form forms\frm_recargos.scx
+ON SELECTION BAR 4 OF _36r1evab8 do form forms\frm_periodos.scx
 
 DEFINE POPUP tablasytar MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF tablasytar PROMPT "Tarifa ISR PF" ;
 	SKIP FOR !EMPTY(WONTOP( )) ;
 	PICTURE "..\icons\clip06.ico"
 DEFINE BAR 2 OF tablasytar PROMPT "Tasa ISR PM" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\tinta100.ico"
 DEFINE BAR 3 OF tablasytar PROMPT "Tasa IETU" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\impuestos.ico"
 DEFINE BAR 4 OF tablasytar PROMPT "\-"
 DEFINE BAR 5 OF tablasytar PROMPT "Tasa Nomina" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\pagos.ico"
 DEFINE BAR 6 OF tablasytar PROMPT "Tasa Hospedaje" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\hotel.ico"
 ON SELECTION BAR 1 OF tablasytar do form forms\frm_isr.scx
 ON SELECTION BAR 2 OF tablasytar do form forms\frmtasaisrpm.scx
 ON SELECTION BAR 3 OF tablasytar do form forms\frm_tarifas.scx
@@ -104,11 +113,13 @@ ON SELECTION BAR 5 OF tablasytar do form forms\frmtasanomina.scx
 ON SELECTION BAR 6 OF tablasytar do form forms\frmtasahospedaje.scx
 
 DEFINE POPUP captura MARGIN RELATIVE SHADOW COLOR SCHEME 4
-DEFINE BAR 1 OF captura PROMPT "Personas Fisicas"
+DEFINE BAR 1 OF captura PROMPT "Personas Fisicas" ;
+	PICTURE "..\icons\fisica1.png"
 DEFINE BAR 2 OF captura PROMPT "\-"
-DEFINE BAR 3 OF captura PROMPT "Personas Morales"
+DEFINE BAR 3 OF captura PROMPT "Personas Morales" ;
+	PICTURE "..\icons\moral.ico"
 ON BAR 1 OF captura ACTIVATE POPUP personasfi
-ON SELECTION BAR 3 OF captura do form forms\frm_captura4.scx
+ON BAR 3 OF captura ACTIVATE POPUP personasmo
 
 DEFINE POPUP personasfi MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF personasfi PROMPT "Act. Empresarial y/o Profesional" ;
@@ -127,10 +138,18 @@ ON SELECTION BAR 3 OF personasfi do form forms\frm_captura5.scx
 ON SELECTION BAR 4 OF personasfi do form forms\frm_captura6.scx
 ON SELECTION BAR 6 OF personasfi do form forms\frm_captura3.scx
 
+DEFINE POPUP personasmo MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF personasmo PROMPT "Titulo II y III"
+DEFINE BAR 2 OF personasmo PROMPT "ReSiCo"
+ON SELECTION BAR 1 OF personasmo do form forms\frm_captura4.scx
+ON SELECTION BAR 2 OF personasmo do form forms\frm_captura7.scx
+
 DEFINE POPUP cálculos MARGIN RELATIVE SHADOW COLOR SCHEME 4
-DEFINE BAR 1 OF cálculos PROMPT "Personas Fisicas"
+DEFINE BAR 1 OF cálculos PROMPT "Personas Fisicas" ;
+	PICTURE "..\icons\fisica1.ico"
 DEFINE BAR 2 OF cálculos PROMPT "\-"
-DEFINE BAR 3 OF cálculos PROMPT "Personas Morales"
+DEFINE BAR 3 OF cálculos PROMPT "Personas Morales" ;
+	PICTURE "..\icons\moral.ico"
 ON BAR 1 OF cálculos ACTIVATE POPUP actividade
 ON BAR 3 OF cálculos ACTIVATE POPUP actividada
 
@@ -155,57 +174,73 @@ ON SELECTION BAR 6 OF actividade do form forms\frm_calculos3.scx
 DEFINE POPUP actividada MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF actividada PROMPT "Titulo I I y  I I I" ;
 	SKIP FOR !EMPTY(WONTOP( ))
+DEFINE BAR 2 OF actividada PROMPT "ReSiCo"
 ON SELECTION BAR 1 OF actividada do form forms\frm_calculos4.scx
+ON SELECTION BAR 2 OF actividada do form forms\frm_calculos7.scx
 
 DEFINE POPUP reportes MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF reportes PROMPT "Reporteador" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\graph07.ico"
 DEFINE BAR 2 OF reportes PROMPT "\-"
 DEFINE BAR 3 OF reportes PROMPT "Empresas" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\moral.ico"
 ON SELECTION BAR 1 OF reportes do form forms\formreportes.scx
 ON BAR 3 OF reportes ACTIVATE POPUP _36x00sl2q
 
 DEFINE POPUP _36x00sl2q MARGIN RELATIVE SHADOW COLOR SCHEME 4
-DEFINE BAR 1 OF _36x00sl2q PROMPT "Todas"
+DEFINE BAR 1 OF _36x00sl2q PROMPT "Todas" ;
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\book03.ico"
 DEFINE BAR 2 OF _36x00sl2q PROMPT "\-"
-DEFINE BAR 3 OF _36x00sl2q PROMPT "Empresarial  - Intermedio - Profesional"
-DEFINE BAR 4 OF _36x00sl2q PROMPT "Personas Fisicas de Arrendamiento"
-DEFINE BAR 5 OF _36x00sl2q PROMPT "Personas Morales Titulo I I"
+DEFINE BAR 3 OF _36x00sl2q PROMPT "Empresarial  - Intermedio - Profesional" ;
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\rep_azul.ico"
+DEFINE BAR 4 OF _36x00sl2q PROMPT "Personas Fisicas de Arrendamiento" ;
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\rep_raro.ico"
+DEFINE BAR 5 OF _36x00sl2q PROMPT "Personas Morales Titulo I I" ;
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\rep_verde.ico"
 ON SELECTION BAR 1 OF _36x00sl2q ;
-	DO _6j00qtn6b ;
+	DO _6uh0qdzq5 ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 ON SELECTION BAR 3 OF _36x00sl2q ;
-	DO _6j00qtn6c ;
+	DO _6uh0qdzq6 ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 ON SELECTION BAR 4 OF _36x00sl2q ;
-	DO _6j00qtn6d ;
+	DO _6uh0qdzq7 ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 ON SELECTION BAR 5 OF _36x00sl2q ;
-	DO _6j00qtn6e ;
+	DO _6uh0qdzq8 ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 
 DEFINE POPUP herramient MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF herramient PROMPT "Impresora" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\printer.ico"
 DEFINE BAR 2 OF herramient PROMPT "\-"
 DEFINE BAR 3 OF herramient PROMPT "Respaldo / Restauracion" ;
 	SKIP FOR !EMPTY(WONTOP( )) ;
 	PICTURE "..\icons\calendario.ico"
 DEFINE BAR 4 OF herramient PROMPT "\-"
 DEFINE BAR 5 OF herramient PROMPT "Depurar Bases" ;
-	SKIP FOR !EMPTY(WONTOP( ))
-DEFINE BAR 6 OF herramient PROMPT "Reindexar BD"
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\limpieza.ico"
+DEFINE BAR 6 OF herramient PROMPT "Reindexar BD" ;
+	PICTURE "..\icons\bd.ico"
 ON SELECTION BAR 1 OF herramient =sys(1037)
 ON BAR 3 OF herramient ACTIVATE POPUP respaldore
 ON SELECTION BAR 5 OF herramient do form forms\limpiar.scx
 ON SELECTION BAR 6 OF herramient ;
-	DO _6j00qtn6f ;
+	DO _6uh0qdzq9 ;
 	IN LOCFILE("\DTAX\MENUS\PRINCIPAL" ,"MPX;MPR|FXP;PRG" ,"WHERE is PRINCIPAL?")
 
 DEFINE POPUP respaldore MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF respaldore PROMPT "Todo el Sistema" ;
-	SKIP FOR !EMPTY(WONTOP( ))
+	SKIP FOR !EMPTY(WONTOP( )) ;
+	PICTURE "..\icons\files04.ico"
 DEFINE BAR 2 OF respaldore PROMPT "\-"
 DEFINE BAR 3 OF respaldore PROMPT "Por empresas" ;
 	SKIP FOR !EMPTY(WONTOP( ))
@@ -215,7 +250,7 @@ ON SELECTION BAR 3 OF respaldore do form forms\frm_backup.scx
 
 *       *********************************************************
 *       *                                                         
-*       * _6J00QTN6A  ON SELECTION BAR 2 OF POPUP empresas        
+*       * _6UH0QDZQ4  ON SELECTION BAR 2 OF POPUP empresas        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -226,7 +261,7 @@ ON SELECTION BAR 3 OF respaldore do form forms\frm_backup.scx
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6j00qtn6a
+PROCEDURE _6uh0qdzq4
 USE data\empresas
 BROWSE
 USE
@@ -235,153 +270,219 @@ USE
 
 *       *********************************************************
 *       *                                                         
-*       * _6J00QTN6B  ON SELECTION BAR 1 OF POPUP _36x00sl2q      
+*       * _6UH0QDZQ5  ON SELECTION BAR 1 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  PRINCIPAL.MPR,            Record:   51      
+*       * From Menu:  PRINCIPAL.MPR,            Record:   57      
 *       * Called By:  ON SELECTION BAR 1 OF POPUP _36x00sl2q      
 *       * Prompt:     Todas                                       
 *       * Snippet:    2                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6j00qtn6b
-CLOSE DATABASES
-OPEN DATABASE ('data\cpasystem')
-SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
-  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
-  Empresas.representante, Empresas.rfc_representante,;
-  Empresas.curp_representante, Empresas.ejercicio_vigente;
+PROCEDURE _6uh0qdzq5
+
+*!*	SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
+*!*	  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
+*!*	  Empresas.representante, Empresas.rfc_representante,;
+*!*	  Empresas.curp_representante, Empresas.ejercicio_vigente;
+*!*	 FROM ;
+*!*	     \dtax\data\empresas.dbf IN 0 SHARED;
+*!*	 ORDER BY Empresas.regimen, Empresas.razon;
+*!*	 INTO CURSOR empresa
+*!*	&& INTO CURSOR qempresa
+*!*	SELECT  empresa
+*!*	REPORT FORM reports\listado_empresas.frx PREVIEW NOConsole
+*!*	USE
+*!*	CLOSE DATABASES
+
+
+SELECT id_em As id_empresa, em1 AS rfc, em2 AS razon,;
+  em7 As regimen,;
+  em11 As ejercicio_vigente;
  FROM ;
-     cpasystem!empresas;
- ORDER BY Empresas.regimen, Empresas.razon;
+     \dtax\data\empresas.dbf ;
+ ORDER BY em7, em2;
  INTO CURSOR empresa
-&& INTO CURSOR qempresa
 SELECT  empresa
 REPORT FORM reports\listado_empresas.frx PREVIEW NOConsole
 USE
-CLOSE DATABASES
+select empresas
+USE
+
+
 
 
 
 
 *       *********************************************************
 *       *                                                         
-*       * _6J00QTN6C  ON SELECTION BAR 3 OF POPUP _36x00sl2q      
+*       * _6UH0QDZQ6  ON SELECTION BAR 3 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  PRINCIPAL.MPR,            Record:   53      
+*       * From Menu:  PRINCIPAL.MPR,            Record:   59      
 *       * Called By:  ON SELECTION BAR 3 OF POPUP _36x00sl2q      
 *       * Prompt:     Empresarial  - Intermedio - Profesional     
 *       * Snippet:    3                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6j00qtn6c
-PUBLIC regimen_tit
-regimen_tit = "Personas Fisicas Emp. Interm. Prof"
-CLOSE DATABASES
-OPEN DATABASE ('data\cpasystem')
-SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
-  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
-  Empresas.representante, Empresas.rfc_representante,;
-  Empresas.curp_representante, Empresas.ejercicio_vigente;
+PROCEDURE _6uh0qdzq6
+
+SELECT id_em, em1, em2,;
+  em3, em6, em7,;
+  em8, em9,;
+  em10, em11;
  FROM ;
-     cpasystem!empresas;
- WHERE  Empresas.regimen = ( "Personas Fisicas Emp. Interm. Prof" );
- ORDER BY Empresas.razon;
+     \dtax\data\empresas.dbf ;
+ WHERE  em7 = ( "Personas Fisicas Prof." );
+ ORDER BY em2;
  INTO CURSOR empresa
 && INTO CURSOR qempresa
 SELECT  empresa
 REPORT FORM reports\rep_empresas.frx PREVIEW NOConsole
 USE
-CLOSE DATABASES
+select empresas
+USE
+
+
+
+*!*	PUBLIC regimen_tit
+*!*	regimen_tit = "Personas Fisicas Emp. Interm. Prof"
+*!*	CLOSE DATABASES
+*!*	OPEN DATABASE ('data\cpasystem')
+*!*	SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
+*!*	  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
+*!*	  Empresas.representante, Empresas.rfc_representante,;
+*!*	  Empresas.curp_representante, Empresas.ejercicio_vigente;
+*!*	 FROM ;
+*!*	     cpasystem!empresas;
+*!*	 WHERE  Empresas.regimen = ( "Personas Fisicas Emp. Interm. Prof" );
+*!*	 ORDER BY Empresas.razon;
+*!*	 INTO CURSOR empresa
+*!*	&& INTO CURSOR qempresa
+*!*	SELECT  empresa
+*!*	REPORT FORM reports\rep_empresas.frx PREVIEW NOConsole
+*!*	USE
+*!*	CLOSE DATABASES
 
 
 *       *********************************************************
 *       *                                                         
-*       * _6J00QTN6D  ON SELECTION BAR 4 OF POPUP _36x00sl2q      
+*       * _6UH0QDZQ7  ON SELECTION BAR 4 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  PRINCIPAL.MPR,            Record:   54      
+*       * From Menu:  PRINCIPAL.MPR,            Record:   60      
 *       * Called By:  ON SELECTION BAR 4 OF POPUP _36x00sl2q      
 *       * Prompt:     Personas Fisicas de Arrendamiento           
 *       * Snippet:    4                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6j00qtn6d
-PUBLIC regimen_tit
-regimen_tit = "Personas Fisicas Emp. Interm. Prof"
-CLOSE DATABASES
-OPEN DATABASE ('data\cpasystem')
-SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
-  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
-  Empresas.representante, Empresas.rfc_representante,;
-  Empresas.curp_representante, Empresas.ejercicio_vigente;
+PROCEDURE _6uh0qdzq7
+*!*	PUBLIC regimen_tit
+*!*	regimen_tit = "Personas Fisicas Emp. Interm. Prof"
+*!*	CLOSE DATABASES
+*!*	OPEN DATABASE ('data\cpasystem')
+*!*	SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
+*!*	  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
+*!*	  Empresas.representante, Empresas.rfc_representante,;
+*!*	  Empresas.curp_representante, Empresas.ejercicio_vigente;
+*!*	 FROM ;
+*!*	     cpasystem!empresas;
+*!*	 WHERE  Empresas.regimen = ( "Personas Fisicas de Arrendamiento" );
+*!*	 ORDER BY Empresas.razon;
+*!*	 INTO CURSOR empresa
+*!*	&& INTO CURSOR qempresa
+*!*	SELECT  empresa
+*!*	REPORT FORM reports\rep_empresas.frx PREVIEW NOConsole
+*!*	USE
+*!*	CLOSE DATABASES
+
+SELECT id_em, em1, em2,;
+  em3, em6, em7,;
+  em8, em9,;
+  em10, em11;
  FROM ;
-     cpasystem!empresas;
- WHERE  Empresas.regimen = ( "Personas Fisicas de Arrendamiento" );
- ORDER BY Empresas.razon;
+     \dtax\data\empresas.dbf ;
+ WHERE  em7 = ( "Personas Fisicas de Arrendamiento" );
+ ORDER BY em2;
  INTO CURSOR empresa
 && INTO CURSOR qempresa
 SELECT  empresa
 REPORT FORM reports\rep_empresas.frx PREVIEW NOConsole
 USE
-CLOSE DATABASES
+select empresas
+USE
 
 
 *       *********************************************************
 *       *                                                         
-*       * _6J00QTN6E  ON SELECTION BAR 5 OF POPUP _36x00sl2q      
+*       * _6UH0QDZQ8  ON SELECTION BAR 5 OF POPUP _36x00sl2q      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  PRINCIPAL.MPR,            Record:   55      
+*       * From Menu:  PRINCIPAL.MPR,            Record:   61      
 *       * Called By:  ON SELECTION BAR 5 OF POPUP _36x00sl2q      
 *       * Prompt:     Personas Morales Titulo I I                 
 *       * Snippet:    5                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6j00qtn6e
-PUBLIC regimen_tit
-regimen_tit = "Personas Fisicas Emp. Interm. Prof"
-CLOSE DATABASES
-OPEN DATABASE ('data\cpasystem')
-SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
-  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
-  Empresas.representante, Empresas.rfc_representante,;
-  Empresas.curp_representante, Empresas.ejercicio_vigente;
+PROCEDURE _6uh0qdzq8
+*!*	PUBLIC regimen_tit
+*!*	regimen_tit = "Personas Fisicas Emp. Interm. Prof"
+*!*	CLOSE DATABASES
+*!*	OPEN DATABASE ('data\cpasystem')
+*!*	SELECT Empresas.id_empresa, Empresas.rfc, Empresas.razon,;
+*!*	  Empresas.domicilio, Empresas.actividad, Empresas.regimen,;
+*!*	  Empresas.representante, Empresas.rfc_representante,;
+*!*	  Empresas.curp_representante, Empresas.ejercicio_vigente;
+*!*	 FROM ;
+*!*	     cpasystem!empresas;
+*!*	 WHERE  Empresas.regimen = ( "Personas Morales Titulo I I" );
+*!*	 ORDER BY Empresas.razon;
+*!*	 INTO CURSOR empresa
+*!*	&& INTO CURSOR qempresa
+*!*	SELECT  empresa
+*!*	REPORT FORM reports\rep_empresas.frx PREVIEW NOConsole
+*!*	USE
+*!*	CLOSE DATABASES
+
+SELECT id_em, em1, em2,;
+  em3, em6, em7,;
+  em8, em9,;
+  em10, em11;
  FROM ;
-     cpasystem!empresas;
- WHERE  Empresas.regimen = ( "Personas Morales Titulo I I" );
- ORDER BY Empresas.razon;
+     \dtax\data\empresas.dbf ;
+ WHERE  em7 = ( "Personas Morales Titulo II" );
+ ORDER BY em2;
  INTO CURSOR empresa
 && INTO CURSOR qempresa
 SELECT  empresa
 REPORT FORM reports\rep_empresas.frx PREVIEW NOConsole
 USE
-CLOSE DATABASES
+select empresas
+USE
 
 
 *       *********************************************************
 *       *                                                         
-*       * _6J00QTN6F  ON SELECTION BAR 6 OF POPUP herramient      
+*       * _6UH0QDZQ9  ON SELECTION BAR 6 OF POPUP herramient      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  PRINCIPAL.MPR,            Record:   68      
+*       * From Menu:  PRINCIPAL.MPR,            Record:   74      
 *       * Called By:  ON SELECTION BAR 6 OF POPUP herramient      
 *       * Prompt:     Reindexar BD                                
 *       * Snippet:    6                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6j00qtn6f
+PROCEDURE _6uh0qdzq9
 respuesta = MESSAGEBOX("Quieres reindexar Base de datos",4+32+0,"Estas Seguro")
 IF respuesta=6
 
